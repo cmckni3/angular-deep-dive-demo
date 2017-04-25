@@ -1,0 +1,15 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>Employee name</th>
+    <th>Title</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.name}}</td>
+      <td>{{employee.title}}</td>
+    </tr>
+    <tr *ngIf="employees.length === 0">
+      <td colspan="2">No employees</td>
+    </tr>
+  </tbody>
+</table>
