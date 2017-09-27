@@ -2,8 +2,9 @@ language: node_js
 node_js:
   - "6"
 cache: yarn
-script: yarn build -- --base-href /angular-deep-dive-demo
-after_script: cp dist/index.html dist/404.html
+script:
+  - yarn build -- --base-href /angular-deep-dive-demo
+  - cp dist/index.html dist/404.html
 deploy:
   provider: pages
   skip_cleanup: true
