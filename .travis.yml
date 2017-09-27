@@ -2,14 +2,12 @@ language: node_js
 node_js:
   - "6"
 cache: yarn
-before_install:
-  yarn add global prez
-script: yarn build
+script: yarn build -- --base-href /angular-deep-dive-demo
 after_script: cp dist/index.html dist/404.html
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: build
+  local_dir: dist
   on:
     branch: master
