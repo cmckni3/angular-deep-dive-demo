@@ -25,7 +25,7 @@ jobs:
           echo "Installing dependencies"
           yarn install
           echo "Building demo..."
-          yarn build -- --base-href /${{ github.event.repository.name }}/
+          yarn build --output-path=dist --base-href /${{ github.event.repository.name }}/
           cp dist/index.html dist/404.html
 
       - name: Deploy 🚀
